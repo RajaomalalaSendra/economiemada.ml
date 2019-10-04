@@ -83,10 +83,6 @@ function getJS_web($path){
     <!-- The main script of the project -->
     <script src=\"".$path."static/assets/js/main.js\" type=\"text/javascript\"></script>
     <script>
-      $(document).ready(function() {
-        // the body of this function is in assets/js/now-ui-kit.js
-        nowuiKit.initSliders();
-      });
   
       function scrollToDownload() {
   
@@ -111,27 +107,27 @@ function brTag(){
 
 function content_card($id, $file){
     echo "
-    <div class=\"col-md-9 pushright \" id=\"".$id."\">
+    <div class=\"getcol-md col-md-9 pushright\" id=\"".$id."\">
             <div class=\"card\">
             <div class=\"card-header\">
                 <ul class=\"nav nav-tabs justify-content-center\" role=\"tablist\">
                 <li class=\"nav-item\">
-                    <a class=\"nav-link active\" data-toggle=\"tab\" href=\"#home\" role=\"tab\">
+                    <a class=\"nav-link active\" data-toggle=\"tab\" href=\"#".str_replace(' ', '',$file["title"][0])."\" role=\"tab\">
                     <i class=\"now-ui-icons ".$file["icons"][0]."\"></i>".$file["title"][0]."
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#profile\" role=\"tab\">
+                    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#".str_replace(' ', '',$file["title"][1])."\" role=\"tab\">
                     <i class=\"now-ui-icons ".$file["icons"][1]."\"></i>".$file["title"][1]."
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#messages\" role=\"tab\">
+                    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#".str_replace(' ', '',$file["title"][2])."\" role=\"tab\">
                     <i class=\"now-ui-icons ".$file["icons"][2]."\"></i>".$file["title"][2]."
                     </a>
                 </li>
                 <li class=\"nav-item\">
-                    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#settings\" role=\"tab\">
+                    <a class=\"nav-link\" data-toggle=\"tab\" href=\"#".str_replace(' ', '',$file["title"][3])."\" role=\"tab\">
                     <i class=\"now-ui-icons ".$file["icons"][3]."\"></i>".$file["title"][3]."
                     </a>
                 </li>
@@ -139,19 +135,19 @@ function content_card($id, $file){
             </div>
             <div class=\"card-body\">
                 <!-- Tab panes -->
-                <div class=\"tab-content text-center\">
-                <div class=\"tab-pane active\" id=\"home\" role=\"tabpanel\">
-                    <div>".$file["contents"][0]."</div>
-                </div>
-                <div class=\"tab-pane\" id=\"profile\" role=\"tabpanel\">
-                    <div>".$file["contents"][1]."</div>
-                </div>
-                <div class=\"tab-pane\" id=\"messages\" role=\"tabpanel\">
-                    <div>".$file["contents"][2]."</div>
-                </div>
-                <div class=\"tab-pane\" id=\"settings\" role=\"tabpanel\">
-                    <div>".$file["contents"][3]."</div>
-                </div>
+                <div class=\"tab-content\">
+                    <div class=\"tab-pane active\" id=\"".str_replace(' ', '',$file["title"][0])."\" role=\"tabpanel\">
+                        <div>".$file["contents"][0]."</div>
+                    </div>
+                    <div class=\"tab-pane\" id=\"".str_replace(' ', '',$file["title"][1])."\" role=\"tabpanel\">
+                        <div>".$file["contents"][1]."</div>
+                    </div>
+                    <div class=\"tab-pane\" id=\"".str_replace(' ', '',$file["title"][2])."\" role=\"tabpanel\">
+                        <div>".$file["contents"][2]."</div>
+                    </div>
+                    <div class=\"tab-pane\" id=\"".str_replace(' ', '',$file["title"][3])."\" role=\"tabpanel\">
+                        <div>".$file["contents"][3]."</div>
+                    </div>
                 </div>
             </div>
             </div>
@@ -159,7 +155,7 @@ function content_card($id, $file){
 ";
 }
 
-function content($contents){
+function contentContainer($contents){
     echo "
     <div class\"container\">".
         $contents."

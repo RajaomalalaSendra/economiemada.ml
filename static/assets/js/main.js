@@ -124,10 +124,24 @@ $(document).ready(function(){
     hideOneCard("#lesson_three_m1", "#introduction_m1", 
     "#lesson_two_m1", "#lesson_one_m1");
 
+    $(".now-ui-icons.education_paper").on("click", function(){
+        var push = $(".getcol-md").attr("class")
+        var push_split = push.split(" ")
+
+        console.log(push)
+      
+        if(push_split[1] == "col-md-9"){
+            $(".getcol-md").removeClass("col-md-9 pushright")
+            $(".getcol-md").addClass("col-md-11 pushup")
+        } else {
+            $(".getcol-md").addClass("col-md-9 pushright")
+            $(".getcol-md").removeClass("col-md-11 pushup")
+        }
+    })
+
 });
 
 function hideOneCard(a, b, c, d){
-    console.log(b, c, d);
     $(a).on('click', function(){
         $(a+"_card").show();
         hideCard([b+"_card", c+"_card", 

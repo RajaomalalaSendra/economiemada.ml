@@ -26,10 +26,14 @@
 }
 
 .sticky-footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   height: 60px; /* Set the fixed height of the footer here */
+}
+
+nav.navbar {
+  background-image: url("http://localhost/economie/static/assets/img/bg8.jpg");
 }
 
 /*sidebar*/
@@ -80,3 +84,11 @@
     }
   }
   
+  .moveright-table {
+    margin-left: 100px;
+  }
+
+  .pushup {
+    margin-top: -250px;
+    margin-left: 70px;
+  }
