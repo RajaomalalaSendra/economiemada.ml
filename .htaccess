@@ -1,0 +1,4 @@
+#Options -MultiViews
+RewriteEngine on
+
+RewriteRule ^(.*)\$ $1.php 

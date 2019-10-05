@@ -13,7 +13,7 @@ abstract class AbstractDashboard{
                                     <!-- Tab panes -->
                                     <div class=\"tab-content\">
                                         <div class=\"tab-pane active\" id=\"home\" role=\"tabpanel\">
-                                            <img src = \"http://localhost/economie/static/assets/img/bg1.jpg\">
+                                            <img src = \"/economie/static/assets/img/bg1.jpg\">
                                         </div>
                                     </div>
                                 </div>

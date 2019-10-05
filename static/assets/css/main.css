@@ -33,7 +33,7 @@
 }
 
 nav.navbar {
-  background-image: url("http://localhost/economie/static/assets/img/bg8.jpg");
+  background-image: url("/economie/static/assets/img/bg8.jpg");
 }
 
 /*sidebar*/
@@ -89,6 +89,6 @@ nav.navbar {
   }
 
   .pushup {
-    margin-top: -250px;
+    margin-top: -300px;
     margin-left: 70px;
   }

@@ -128,8 +128,6 @@ $(document).ready(function(){
         var push = $(".getcol-md").attr("class")
         var push_split = push.split(" ")
 
-        console.log(push)
-      
         if(push_split[1] == "col-md-9"){
             $(".getcol-md").removeClass("col-md-9 pushright")
             $(".getcol-md").addClass("col-md-11 pushup")
